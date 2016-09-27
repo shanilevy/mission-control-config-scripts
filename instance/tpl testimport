@@ -1,0 +1,9 @@
+security {
+  groups {
+    conflictResolutionPolicy 'OVERRIDE'
+    group('accounting managers') {
+      description 'People who can manage accounting entries'
+      autoJoin false
+    }
+ }
+}
