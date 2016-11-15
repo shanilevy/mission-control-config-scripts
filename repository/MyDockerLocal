@@ -1,0 +1,27 @@
+localRepository('docker-local') {
+  description ''
+  notes ''
+  includesPattern '**/*'
+  excludesPattern ''
+  repoLayoutRef 'simple-default'
+  propertySets (['artifactory'])
+  archiveBrowsingEnabled false
+  blackedOut false
+
+  packageType 'docker'
+
+  dockerApiVersion 'V2'
+  forceDockerAuthentication 
+
+  replication('http://localhost:8082/artifactory/docker-local') {
+    cronExp '0 30 8 * * ?'
+    socketTimeoutMillis 15000
+    username 'admin'
+    password //Dont forget to put password here
+    proxy
+    enableEventReplication true
+    enabled false
+    syncDeletes true
+    syncProperties true
+  }
+}
