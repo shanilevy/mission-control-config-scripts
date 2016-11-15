@@ -1,0 +1,21 @@
+security {
+  permissions {
+    conflictResolutionPolicy 'OVERRIDE'
+    permission('OnlyJars') {
+      includesPattern '**/*.jar'
+      excludesPattern ''
+      anyLocal false
+      anyRemote false
+      anyDistribution false
+      repositories (['libs-snapshot-local', 'libs-release-local'])
+      users {
+        'don-draper' (['read'])
+        'liz-lemon' (['read', 'delete', 'deploy', 'manage', 'annotate'])
+      }
+      groups {
+        'pd managers' (['read', 'delete', 'deploy', 'annotate'])
+        'Testers' (['read'])
+      }
+    }
+  }
+}
