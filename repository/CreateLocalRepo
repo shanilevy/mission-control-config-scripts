@@ -1,0 +1,17 @@
+repokey = userInput (
+    type : "STRING", // "BOOLEAN", "INTEGER", "INSTANCE", "REPOSITORY"
+    description : "Repository Key",
+    validations : (["cron"])
+  )
+
+localRepository(repokey) {
+  description "Public description"
+  notes "Some internal notes"
+  includesPattern "**/*" // default
+  excludesPattern "" // default
+  repoLayoutRef "maven-2-default"
+  propertySets // (["ps1", "ps2"])
+  archiveBrowsingEnabled false
+  blackedOut false // default
+  packageType "generic" // "bower" | "cocoapods" | "debian" | "docker" | "gems" | "generic" | "gitlfs" | "gradle" | "ivy" | "maven" | "npm" | "nuget" | "opkg" | "pypi" | "sbt" | "vagrant" | "yum"
+}
