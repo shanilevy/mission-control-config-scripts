@@ -1,0 +1,27 @@
+localRepository('debian-local') {
+  description ''
+  notes ''
+  includesPattern '**/*'
+  excludesPattern ''
+  repoLayoutRef 'simple-default'
+  propertySets (['artifactory'])
+  archiveBrowsingEnabled false
+  blackedOut false
+
+  packageType 'debian'
+
+  debianTrivialLayout false
+
+
+  replication('http://artifactory.local:8082/artifactory/debian-local') {
+    cronExp '0 5 2 * * ?'
+    socketTimeoutMillis 15000
+    username 'admin'
+    password //Dont forget to put password here
+    proxy
+    enableEventReplication true
+    enabled false
+    syncDeletes true
+    syncProperties true
+  }
+}
