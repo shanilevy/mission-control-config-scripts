@@ -21,7 +21,7 @@ Create new script -> paste the `CreateLocalRepo` script in the editor. Save
 
 Step 2: selecting repositories / new repository / select instances - select source instance and destination instances
 
-![alt tag](https://github.com/shanilevy/mission-control-config-scripts/blob/master/Topology/Full Mesh Topology/screenshots/NewRepo0.jpg)
+![alt tag](https://github.com/shanilevy/mission-control-config-scripts/blob/master/Topology/Full%20Mesh%20Topology/screenshots/NewRepo0.jpg)
 
 Step 3: in apply scripts - select the `CreateLocalRepo` script and select the repositories 
 
